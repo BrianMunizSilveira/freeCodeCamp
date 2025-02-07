@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Adoção de Animais</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="polaroid">
+          <img src="./gato.webp" alt="Gato para adoção" />
+        </div>
+        <div class="polaroid">
+          <img src="./cachorro.webp" alt="Cachorro para adoção" />
+        </div>
+        <div class="sidebar-text">
+          Seu amigo<br />
+          está te<br />
+          esperando!
+        </div>
+      </div>
+      <main>
+        <header>
+          <h1 id="title">Formulário de Adoção de Animais</h1>
+          <p id="description">Encontre seu novo melhor amigo!</p>
+        </header>
+        <form action="#" id="survey-form">
+          <p>
+            <label for="name" id="name-label">Nome Completo:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              autofocus
+              minlength="3"
+              maxlength="30"
+              placeholder="Digite seu nome completo"
+              autocomplete="name"
+              title="Digite seu nome completo"
+            />
+          </p>
+          <p>
+            <label for="email" id="email-label">E-mail:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Digite seu e-mail"
+              autocomplete="email"
+              title="Digite seu endereço de e-mail"
+            />
+          </p>
+          <p>
+            <label for="number" id="number-label">Idade (opcional):</label>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              min="18"
+              max="100"
+              placeholder="Digite sua idade"
+            />
+          </p>
+          <p>
+            <label for="dropdown"
+              >Qual seu principal interesse em adoção?</label
+            >
+            <select name="dropdown" id="dropdown">
+              <option value="" disabled selected>
+                Selecione sua motivação
+              </option>
+              <option value="companionship">Companhia</option>
+              <option value="protection">Proteção</option>
+              <option value="breeding">Reprodução</option>
+              <option value="other">Outro</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Tipo de Animal Preferido</legend>
+            <input
+              type="radio"
+              name="animal"
+              id="cachorro"
+              value="cachorro"
+              checked
+            />
+            <label for="cachorro">Cachorro</label>
+            <input type="radio" name="animal" id="gato" value="gato" />
+            <label for="gato">Gato</label>
+            <input type="radio" name="animal" id="passaro" value="passaro" />
+            <label for="passaro">Pássaro</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Condições de Adoção</legend>
+            <div>
+              <input
+                type="checkbox"
+                id="termo1"
+                name="termos"
+                value="responsabilidade"
+                required
+              />
+              <label for="termo1"
+                >Aceito assumir total responsabilidade pelo animal</label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="termo2"
+                name="termos"
+                value="espaco"
+                required
+              />
+              <label for="termo2">Possuo espaço adequado para o animal</label>
+            </div>
+          </fieldset>
+
+          <p>
+            <label for="additional-comments">Comentários Adicionais:</label>
+            <textarea
+              id="additional-comments"
+              name="additional-comments"
+              rows="4"
+              placeholder="Conte-nos mais sobre você e por que quer adotar um animal"
+            ></textarea>
+          </p>
+
+          <p>
+            <input
+              type="submit"
+              id="submit"
+              value="Enviar Formulário de Adoção"
+            />
+          </p>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
