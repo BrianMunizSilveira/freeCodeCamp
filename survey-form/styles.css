@@ -177,3 +177,75 @@ main {
         }
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .container {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+        .sidebar {
+            background-color: #333d29;
+
+            .polaroid {
+                background-color: #2c2c2c;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+                img {
+                    filter: brightness(0.9); /* Ajusta o brilho das imagens para o modo escuro */
+                }
+            }
+
+            .sidebar-text {
+                color: #e0e0e0;
+            }
+        }
+
+        main {
+            header {
+                #title {
+                    color: #a5d6a7;
+                }
+
+                #description {
+                    color: #81c784;
+                }
+            }
+
+            #survey-form {
+                label {
+                    color: #a5d6a7;
+                }
+
+                input,
+                select,
+                textarea {
+                    border-color: #a5d6a7;
+                    background-color: #2c2c2c;
+                    color: #e0e0e0;
+                }
+
+                fieldset {
+                    border-color: #a5d6a7;
+
+                    legend {
+                        color: #a5d6a7;
+                    }
+                }
+
+                #submit {
+                    background-color: #333d29;
+                    color: #e0e0e0;
+
+                    &:hover {
+                        background-color: #2b3322;
+                    }
+                }
+            }
+        }
+    }
+}
