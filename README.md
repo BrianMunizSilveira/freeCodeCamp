@@ -10,11 +10,11 @@ O [freeCodeCamp](https://www.freecodecamp.org/) é uma plataforma de aprendizado
 
 Aqui está a lista dos projetos que já concluí:
 
-### 1. [📋 Formulário de Adoção de Animais](https://free-code-camp-ivory.vercel.app/survey-form/survey-form.html) 🎉
+### 1. [📋 Formulário de Adoção de Animais](https://free-code-camp-ivory.vercel.app/Projects/survey-form/survey-form.html) 🎉
 ![Print do projeto](https://i.imgur.com/4kva9H5.png)
 - **📝 Descrição**: Um formulário interativo e responsivo para adoção de animais, com validações HTML5 e design amigável.
 - **🛠️ Tecnologias utilizadas**: **HTML5** e **CSS3**.
-- **🔗 Link para o projeto**: [Clique aqui para ver o projeto](https://free-code-camp-ivory.vercel.app/survey-form/survey-form.html)
+- **🔗 Link para o projeto**: [Clique aqui para ver o projeto](https://free-code-camp-ivory.vercel.app/Projects/survey-form/survey-form.html)
 
 ## 🚀 Como usar este repositório
 
