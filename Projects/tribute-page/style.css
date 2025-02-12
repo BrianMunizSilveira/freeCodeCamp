@@ -1,0 +1,136 @@
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+
+    /* Container principal */
+    #main {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        /* Título */
+        #title {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Container da imagem */
+        #img-div {
+            text-align: center;
+            margin-bottom: 30px;
+
+            /* Imagem */
+            #image {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Legenda da imagem */
+            #img-caption {
+                font-size: 1rem;
+                color: #666;
+                margin-top: 10px;
+                font-style: italic;
+            }
+        }
+
+        /* Informações do tributo */
+        #tribute-info {
+            font-size: 1.1rem;
+            color: #444;
+            text-align: justify;
+            margin-bottom: 30px;
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Link de mais informações */
+        #tribute-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #2980b9;
+            }
+        }
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        #main {
+            margin: 20px;
+            padding: 15px;
+
+            #title {
+                font-size: 2rem;
+            }
+
+            #tribute-info {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+/* Modo Escuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+
+        #main {
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+
+            #title {
+                color: #bb86fc;
+            }
+
+            #img-div {
+    
+                #img-caption {
+                    font-size: 1rem;
+                    color: #e7e7e7;
+                    margin-top: 10px;
+                    font-style: italic;
+                }
+            }
+
+            #tribute-info {
+                color: #c0c0c0;
+
+                p {
+                    color: #c0c0c0;
+                }
+            }
+
+            #tribute-link {
+                background-color: #6200ee;
+                color: #fff;
+            }
+        }
+    }
+}
