@@ -16,11 +16,20 @@ Aqui está a lista dos projetos que já concluí:
 - **🛠️ Tecnologias utilizadas**: **HTML5** e **CSS3**.
 - **🔗 Link para o projeto**: [Clique aqui para ver o projeto](https://free-code-camp-ivory.vercel.app/Projects/survey-form/survey-form.html)
 
+---
+
+### 2. [🌟 Página de Tributo a Paulo Freire](https://free-code-camp-ivory.vercel.app/Projects/tribute-page/index.html)
+![Print do Projeto](./Projects/tribute-page/AYsbJ5K.png)
+- **📝 Descrição**: Uma página de tributo moderna e responsiva dedicada ao educador Paulo Freire, com design limpo e informações sobre sua vida e obra.
+- **🛠️ Tecnologias utilizadas**: **HTML5** e **CSS3**.
+- **🔗 Link para o projeto**: [Clique aqui para ver o projeto](https://free-code-camp-ivory.vercel.app/Projects/tribute-page/index.html)
+
+
 ## 🚀 Como usar este repositório
 
 Cada projeto está organizado em sua própria pasta, com um `README.md` específico que detalha o projeto, as tecnologias utilizadas e como executá-lo localmente. Siga as instruções de cada projeto para começar! 📂
 
-## 🤝 Contribuições
+## 🤝 **Contribuições**
 
 Se você tiver alguma sugestão ou encontrar algum problema em algum dos projetos, sinta-se à vontade para abrir uma [issue](https://github.com/BrianMunizSilveira/freeCodeCamp/issues) ou enviar um [pull request](https://github.com/BrianMunizSilveira/freeCodeCamp/pulls). Sua contribuição é muito bem-vinda! 💡
 
