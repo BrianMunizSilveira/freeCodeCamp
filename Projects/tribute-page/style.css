@@ -2,142 +2,466 @@
     --primary: #2c3e50;
     --secondary: #3498db;
     --accent: #2980b9;
-    --bg: #f4f4f4;
+    --bg: #f8f9fa;
     --white: #fff;
     --gray: #666;
+    --dark-bg: #1a1a1a;
     --border-radius: 12px;
+    --shadow-light: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 15px 50px rgba(0, 0, 0, 0.15);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg);
     color: var(--primary);
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-#main {
-    max-width: 820px;
-    margin: 48px auto;
-    padding: 32px 24px;
-    background: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.09);
-}
-#img-div {
+
+/* Header Parallax */
+.parallax-header {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.9)),
+        url('https://upload.wikimedia.org/wikipedia/commons/4/4c/2016-07-04_-_Paulo_Freire_no_Portal_EBC.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 32px;
+    position: relative;
+    color: white;
 }
-#image {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.13);
-    margin-bottom: 12px;
-    border: 2px solid var(--secondary);
+
+.parallax-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
 }
-#title {
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
     font-family: 'Merriweather', serif;
-    font-size: 2.7rem;
-    color: var(--primary);
+    font-size: 4rem;
     font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
 }
-#img-caption {
-    font-size: 1.1rem;
-    color: var(--gray);
-    font-style: italic;
-    margin: 1em auto 1em auto;
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-hr {
-    border: none;
-    border-top: 2px solid var(--secondary);
-    margin: 32px 0 24px 0;
-    width: 60px;
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    cursor: pointer;
 }
-#tribute-info {
-    font-size: 1.13rem;
+
+.scroll-arrow {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
+#main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    background: var(--white);
+    box-shadow: var(--shadow-medium);
+    position: relative;
+    z-index: 3;
+    margin-top: -50px;
+    border-radius: 20px 20px 0 0;
+}
+
+.section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    border-radius: 2px;
+}
+
+.bio-content {
+    font-size: 1.15rem;
     color: #444;
+    line-height: 1.8;
     text-align: justify;
-    line-height: 1.7;
-    margin-bottom: 32px;
 }
-#tribute-info p {
-    margin-bottom: 18px;
+
+.bio-content p {
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
 }
-.icon-quote {
+
+.bio-content p:hover {
+    transform: translateX(5px);
+}
+
+.highlight {
+    background: linear-gradient(120deg, transparent 0%, rgba(52, 152, 219, 0.1) 50%, transparent 100%);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* Quote Section */
+.quote-section {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: white;
+    padding: 50px 40px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-section::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    font-size: 8rem;
+    opacity: 0.2;
+    font-family: serif;
+}
+
+.quote-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.quote-author {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.achievement-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    border-left: 4px solid var(--secondary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.achievement-title {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.achievement-desc {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--secondary);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    width: calc(50% - 30px);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+}
+
+.timeline-year {
+    font-weight: 700;
     color: var(--secondary);
-    font-size: 2rem;
-    vertical-align: middle;
-    margin-right: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: var(--secondary);
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    z-index: 2;
+}
+
+/* Link Button */
 #tribute-link {
     display: inline-block;
-    padding: 12px 28px;
-    background: var(--secondary);
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
     color: var(--white);
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 1.05rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-    box-shadow: 0 2px 6px rgba(44, 62, 80, 0.07);
-    transition: background 0.2s;
-}
-#tribute-link:hover,
-#tribute-link:focus {
-    background: var(--accent);
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-@media (max-width: 700px) {
-    #main {
-        margin: 18px;
-        padding: 14px;
+#tribute-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+#tribute-link:hover::before {
+    left: 100%;
+}
+
+#tribute-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
     }
-    #title {
-        font-size: 2rem;
-    }
-    #tribute-info {
-        font-size: 1rem;
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+@keyframes bounce {
 
-/* Modo Escuro */
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-
-        #main {
-            background-color: #1e1e1e;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-
-            #title {
-                color: #bb86fc;
-            }
-
-            #img-div {
-    
-                #img-caption {
-                    font-size: 1rem;
-                    color: #e7e7e7;
-                    margin-top: 10px;
-                    font-style: italic;
-                }
-            }
-
-            #tribute-info {
-                color: #c0c0c0;
-
-                p {
-                    color: #c0c0c0;
-                }
-            }
-
-            #tribute-link {
-                background-color: #6200ee;
-                color: #fff;
-            }
-        }
+    :root {
+        --bg: #0f0f0f;
+        --white: #1e1e1e;
+        --primary: #e0e0e0;
+        --gray: #b0b0b0;
     }
+
+    .parallax-header {
+        background: linear-gradient(135deg, rgb(77 77 77 / 0%), rgba(50, 50, 50, 0.9)), url(./paulo-freire.webp) no-repeat center center / cover;
+    }
+
+    .achievement-card,
+    .timeline-content {
+        background: #2a2a2a;
+        border-color: var(--secondary);
+    }
+
+    .bio-content {
+        color: #c0c0c0;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .parallax-header {
+        background-attachment: scroll;
+        height: 70vh;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    #main {
+        margin: 20px;
+        padding: 40px 20px;
+        margin-top: -30px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .timeline-dot {
+        left: 20px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-section {
+        padding: 30px 20px;
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    z-index: 1000;
+    transition: width 0.1s ease;
 }

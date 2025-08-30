@@ -12,35 +12,131 @@
 </head>
 
 <body>
-    <main id="main">
-        <div id="img-div">
-            <div id="img-caption">
-                <h1 id="title">Paulo Freire</h1>
-                <p id="img-caption">Paulo Freire, um dos maiores educadores do século XX.</p>
-            </div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/2016-07-04_-_Paulo_Freire_no_Portal_EBC.jpg"
-                alt="Paulo Freire" id="image" style="display: block;max-width: 100%;margin: auto;">
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Parallax Header -->
+    <header class="parallax-header" id="parallaxHeader">
+        <div class="hero-content">
+            <h1 class="hero-title" id="title">Paulo Freire</h1>
+            <p class="hero-subtitle">Educador, filósofo e pedagogo revolucionário</p>
         </div>
-        <article id="tribute-info">
-            <p>
-                Paulo Freire (1921-1997) foi um educador, filósofo e pedagogo brasileiro, reconhecido internacionalmente
-                por seu trabalho na área da educação popular. Sua obra mais famosa, <em>Pedagogia do Oprimido</em>, é
-                considerada um marco na pedagogia crítica e influenciou educadores em todo o mundo.
+        <div class="scroll-indicator" onclick="scrollToMain()">
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Biografia -->
+        <section class="section" id="biografia">
+            <h2 class="section-title">Biografia</h2>
+            <div class="bio-content" id="tribute-info">
+                <p>
+                    <span class="highlight">Paulo Freire (1921-1997)</span> foi um educador, filósofo e pedagogo
+                    brasileiro, reconhecido internacionalmente
+                    por seu trabalho na área da educação popular. Sua obra mais famosa, <em>Pedagogia do Oprimido</em>,
+                    é
+                    considerada um marco na pedagogia crítica e influenciou educadores em todo o mundo.
+                </p>
+                <p>
+                    Freire defendia uma <span class="highlight">educação libertadora</span>, que promovesse a
+                    conscientização e a transformação social. Seu
+                    método de alfabetização, baseado no diálogo e no contexto cultural dos alunos, revolucionou a
+                    maneira
+                    como a educação é entendida e praticada, especialmente em comunidades marginalizadas.
+                </p>
+                <p>
+                    Além de sua contribuição teórica, Paulo Freire atuou como secretário de educação na cidade de São
+                    Paulo,
+                    onde implementou políticas inovadoras para a democratização do acesso à educação. Sua influência
+                    permanece viva, inspirando educadores e movimentos sociais ao redor do mundo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Quote -->
+        <section class="quote-section section">
+            <p class="quote-text">
+                "Não há educação neutra. Ou ela funciona como instrumento de conformação ou como prática da liberdade."
             </p>
-            <p>
-                Freire defendia uma educação libertadora, que promovesse a conscientização e a transformação social. Seu
-                método de alfabetização, baseado no diálogo e no contexto cultural dos alunos, revolucionou a maneira
-                como a educação é entendida e praticada, especialmente em comunidades marginalizadas.
-            </p>
-            <p>
-                Além de sua contribuição teórica, Paulo Freire atuou como secretário de educação na cidade de São Paulo,
-                onde implementou políticas inovadoras para a democratização do acesso à educação. Sua influência
-                permanece viva, inspirando educadores e movimentos sociais ao redor do mundo.
-            </p>
-        </article>
-        <a id="tribute-link" href="https://pt.wikipedia.org/wiki/Paulo_Freire" target="_blank">Mais informações sobre
-            Paulo Freire</a>
+            <p class="quote-author">— Paulo Freire</p>
+        </section>
+
+        <!-- Principais Realizações -->
+        <section class="section">
+            <h2 class="section-title">Principais Realizações</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3 class="achievement-title">Pedagogia do Oprimido</h3>
+                    <p class="achievement-desc">
+                        Obra fundamental que revolucionou a educação mundial, traduzida para mais de 35 idiomas.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <h3 class="achievement-title">Método Paulo Freire</h3>
+                    <p class="achievement-desc">
+                        Sistema inovador de alfabetização baseado no diálogo e na realidade dos educandos.
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <h3 class="achievement-title">Educação Popular</h3>
+                    <p class="achievement-desc">
+                        Pioneiro na democratização da educação e na valorização do conhecimento popular.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="section">
+            <h2 class="section-title">Linha do Tempo</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1921</div>
+                        <p>Nascimento em Recife, Pernambuco</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1963</div>
+                        <p>Implementação do método de alfabetização em Angicos, RN</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1970</div>
+                        <p>Publicação de "Pedagogia do Oprimido"</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1989</div>
+                        <p>Secretário de Educação de São Paulo</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1997</div>
+                        <p>Falecimento aos 75 anos, deixando um legado imenso</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Link Externo -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a id="tribute-link" href="https://pt.wikipedia.org/wiki/Paulo_Freire" target="_blank">
+                Mais informações sobre Paulo Freire
+            </a>
+        </div>
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
