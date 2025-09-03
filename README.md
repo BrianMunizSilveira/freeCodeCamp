@@ -19,7 +19,7 @@ Aqui está a lista dos projetos que já concluí:
 ---
 
 ### 2. [🌟 Página de Tributo a Paulo Freire](https://free-code-camp-ivory.vercel.app/Projects/tribute-page/index.html)
-![Print do Projeto](./Projects/tribute-page/AYsbJ5K.png)
+![Print do Projeto](https://i.imgur.com/N1cO42j.png)
 - **📝 Descrição**: Uma página de tributo moderna e responsiva dedicada ao educador Paulo Freire, com design limpo e informações sobre sua vida e obra.
 - **🛠️ Tecnologias utilizadas**: **HTML5** e **CSS3**.
 - **🔗 Link para o projeto**: [Clique aqui para ver o projeto](https://free-code-camp-ivory.vercel.app/Projects/tribute-page/index.html)
