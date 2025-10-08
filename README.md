@@ -25,6 +25,13 @@ Aqui está a lista dos projetos que já concluí:
 - **🔗 Link para o projeto**: [Clique aqui para ver o projeto](https://free-code-camp-ivory.vercel.app/Projects/tribute-page/index.html)
 
 
+### 3. [✈️ Página da Agência de Viagens](https://free-code-camp-ivory.vercel.app/Projects/travel-agency-page/travel-agency-page.html)
+![Print do Projeto](Projects/travel-agency-page/travel-agency-page.webp)
+- **📝 Descrição**: Uma landing page moderna para uma agência de viagens, com lista de itinerários, imagens ilustrativas e navegação por links, focada em responsividade e acessibilidade.
+- **🛠️ Tecnologias utilizadas**: **HTML5**, **CSS3** e **JavaScript**.
+- **🔗 Link para o projeto**: [Clique aqui para ver o projeto](https://free-code-camp-ivory.vercel.app/Projects/travel-agency-page/travel-agency-page.html)
+
+
 ## 🚀 Como usar este repositório
 
 Cada projeto está organizado em sua própria pasta, com um `README.md` específico que detalha o projeto, as tecnologias utilizadas e como executá-lo localmente. Siga as instruções de cada projeto para começar! 📂
